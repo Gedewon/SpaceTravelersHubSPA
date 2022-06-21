@@ -1,12 +1,16 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 import style from "./Layout.module.css"
+import logo from './logo.png'
 function Layout({children}) {
   return (
     <div>
         <header>
+            <section className={style.logoSection}>
 
+            <img src={logo} alt="logo of Space Traveler's Hub"/>
             <h1>Space Travelers' Hub</h1>    
+            </section>
             <nav>
                 <ul>
                     <li>
