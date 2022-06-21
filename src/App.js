@@ -7,13 +7,13 @@ import Rockets from './component/Rockets/Rockets';
 
 function App() {
   return (
-   <Layout>
+    <Layout>
       <Routes>
-        <Route  path="/profile" element={<Profile />}/>
-        <Route  path="/missions" element={<Missions />}/>
-        <Route  path="/*" element={<Rockets />}/>
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/missions" element={<Missions />} />
+        <Route path="/*" element={<Rockets />} />
       </Routes>
-   </Layout>
+    </Layout>
   );
 }
 
