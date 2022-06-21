@@ -1,0 +1,10 @@
+ul{
+    list-style: none;
+}
+.active{
+    text-decoration: underline;
+}
+
+.deactivate{
+    text-decoration: none;
+}
