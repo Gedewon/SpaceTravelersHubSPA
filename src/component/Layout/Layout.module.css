@@ -1,0 +1,44 @@
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+li {
+  padding-right: 20px;
+}
+
+li:last-child {
+  border-left: solid 2px black;
+  padding-left: 20px;
+}
+
+.active {
+  text-decoration: underline;
+  color: #20639b;
+}
+
+.deactivate {
+  text-decoration: none;
+  color: #20639b;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 1.2px rgb(172, 170, 170);
+  margin: 0 10%;
+  padding: 1%;
+}
+
+.logoSection {
+  display: flex;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  padding: 10px;
+}
