@@ -1,10 +1,13 @@
-import { applyMiddleware, combineReducers, creteStore } from 'redux';
+import { applyMiddleware, combineReducers, legacy_createStore as createStore } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
+import missionsReducer from './missions/missions';
 
-const reducer = combineReducers({});
+const reducer = combineReducers({
+  missionsReducer,
+});
 
-const store = creteStore(
+const store = createStore(
   reducer,
   applyMiddleware(thunk, logger),
 );
