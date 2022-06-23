@@ -12,9 +12,8 @@ const Mission = (props) => {
       <td>{missionName}</td>
       <td>{missionDescription}</td>
 
-      {(() => ((missionStatus) ? <MissionTrue id={missionId} /> : <MissionFalse id={missionId} />)
-      )()}
-
+      {missionStatus && <MissionTrue id={missionId} />}
+      {!missionStatus && <MissionFalse id={missionId} />}
     </tr>
   );
 };
