@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const GET_ROCKETS = 'spacex-project/rocket/GET_ROCKETS';
-const CHANGE_ROCKET_STATUS = 'spacex-project/rocket/CHANGE_ROCKET_STATUS';
+export const GET_ROCKETS = 'spacex-project/rocket/GET_ROCKETS';
+export const CHANGE_ROCKET_STATUS = 'spacex-project/rocket/CHANGE_ROCKET_STATUS';
 const ROCKET_URL = 'https://api.spacexdata.com/v3/rockets';
 
 export const getRockets = () => async (dispatch) => {
