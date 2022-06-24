@@ -4,7 +4,9 @@ import styled from 'styled-components';
 
 const Profile = () => {
   const missions = useSelector((state) => state.missionsReducer);
+  const rockets = useSelector((state) => state.rocketsReducer);
   const joined = missions.filter((mission) => mission.missionStatus);
+  const reserved = rockets.filter((rocket)=>rocket.rocketStatus);
 
   const Wrapper = styled.div`
   display: flex;
@@ -47,8 +49,16 @@ const Profile = () => {
       <div>
         <h2>My Rockets</h2>
         <table>
-          {/* code for booked Rockets */}
-          <tbody />
+        <tbody>
+          {
+            reserved.map((item)=>(
+
+              <tr key={item.rocketId}>
+              <td>{item.rocketName}</td>
+            </tr>
+            ))
+          }
+          </tbody >
         </table>
       </div>
     </Wrapper>
