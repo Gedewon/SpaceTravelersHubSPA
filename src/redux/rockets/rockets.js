@@ -23,19 +23,19 @@ export const getRockets = () => async (dispatch) => {
   });
 };
 
-export const changerRocketStatus = (id) => ({
+export const changeRocketStatus = (id) => ({
   type: CHANGE_ROCKET_STATUS,
   payload: id,
 });
 
-export default reducer = (state = [], action) => {
+export default function reducer (state = [], action)  {
   switch (action.type) {
     case GET_ROCKETS:
       return action.payload;
     case CHANGE_ROCKET_STATUS: {
       return state.map(rocket=>{
-        if(rocket.id === action.payload.id)
-            return {...action.payload,rocketStatus:!rocketStatus}
+        if(rocket.rocketId === action.payload)
+            return {...rocket,rocketStatus:!rocket.rocketStatus}
         return rocket;
       });
     }
