@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getRockets ,changeRocketStatus} from '../../redux/rockets/rockets';
+import Rocket from './Rocket';
 
 
 
@@ -11,24 +12,19 @@ function Rockets() {
   useEffect(() => {
     let isDisposed = false;
     
-    if(!isDisposed )dispatch(getRockets());
+    if(!isDisposed && !rockets.length)dispatch(getRockets());
 
     return () => {
       isDisposed = true;
     }
   }, [])
   
- 
+
 
   return (
      <div>
        {rockets.map(rocket=>
-        <div key={rocket.rocketId}>
-        <img width={200} height={200} src={rocket.rocketImage} alt={rocket.rocketDescription}/>
-        <h2>{rocket.rocketName}</h2>
-        <p>{rocket.rocketStatus && <span> Reserved </span>}{rocket.rocketDescription}</p>
-        <button type='button' onClick={()=>dispatch(changeRocketStatus(rocket.rocketId))} >{rocket.rocketStatus ? 'Cancel Reservation' :'Reserve Rocket'}</button>
-        </div>
+         <Rocket key={rocket.rocketId} rocket={rocket} />
        )}
      </div>
   );
