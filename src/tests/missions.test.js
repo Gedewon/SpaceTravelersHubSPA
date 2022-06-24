@@ -1,5 +1,4 @@
-import missionsReducer from '../redux/missions/missions';
-
+import missionsReducer,{GET_MISSIONS,CHANGE_MISSION_STATUS} from '../redux/missions/missions';
 const state = [
   {
     missionId: 1,
@@ -15,16 +14,17 @@ const state = [
   },
 ];
 
+
 describe('Mission Reducer', () => {
   it('action GET_MISSIONS', () => {
-    const action = { type: 'GET_MISSIONS', payload: state };
+    const action = { type: GET_MISSIONS, payload: state };
     const result = missionsReducer([], action);
-    expect(result).toEqual(state);
+    expect(result.length).toEqual(state.length);
   });
 
   it('action CHANGE_MISSION_STATUS', () => {
     const action = {
-      type: 'CHANGE_MISSION_STATUS',
+      type: CHANGE_MISSION_STATUS,
       payload: 1,
     };
     const newState = [
