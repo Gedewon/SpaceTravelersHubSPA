@@ -1,4 +1,4 @@
-import rocketsReducer,{GET_ROCKETS,CHANGE_ROCKETS_STATUS} from '../redux/rockets/rockets';
+import rocketsReducer, { GET_ROCKETS, CHANGE_ROCKET_STATUS } from '../redux/rockets/rockets';
 
 const state = [
   {
@@ -17,7 +17,6 @@ const state = [
   },
 ];
 
-
 describe('rockets Reducer', () => {
   it('action GET_ROCKETS', () => {
     const action = { type: GET_ROCKETS, payload: state };
@@ -25,14 +24,14 @@ describe('rockets Reducer', () => {
     expect(result.length).toEqual(state.length);
   });
 
-  it('action CHANGE_ROCKETS_STATUS', () => {
+  it('action CHANGE_ROCKET_STATUS', () => {
     const action = {
-      type: CHANGE_ROCKETS_STATUS,
+      type: CHANGE_ROCKET_STATUS,
       payload: 1,
     };
-   
+
     const result = rocketsReducer(state, action);
-    const changedStatusRocket = result.filter(rocket=>rocket.id === action.payload);
+    const changedStatusRocket = result.filter((rocket) => rocket.id === action.payload);
     expect(changedStatusRocket.rocketStatus).not.toEqual(state[0].rocketStatus);
   });
 });
