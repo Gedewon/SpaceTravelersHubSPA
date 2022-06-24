@@ -1,37 +1,43 @@
-.card{
-    display: flex;
-    margin: 0 10%;
+.card {
+  display: flex;
+  margin: 0 10%;
 }
-.detail{
-    display: flex;
-    flex-direction: column;
+
+.detail {
+  display: flex;
+  flex-direction: column;
 }
-.rocketImage{
-    width: 20%;
-    height: 40%;
+
+.rocketImage {
+  width: 20%;
+  height: 40%;
 }
-button{
-    width:fit-content;
-    padding: 10px;
-    border-radius: 3px;
-    font-size: 20px;
-    cursor: pointer;
+
+button {
+  width: fit-content;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 20px;
+  cursor: pointer;
 }
-.buttonReserve{
-    background-color: rgba(25, 137, 241, 0.779);
-    border: none;
-    color: white;
+
+.buttonReserve {
+  background-color: rgba(25, 137, 241, 0.779);
+  border: none;
+  color: white;
 }
-.buttonCancel{
-   color: gray;
-   background-color: white;
-   border: gray solid 1px;
+
+.buttonCancel {
+  color: gray;
+  background-color: white;
+  border: gray solid 1px;
 }
-.tag{
-   width: fit-content; 
-   color: white;
-   background-color: rgb(12, 168, 168);
-    border-radius: 5px;
-    padding: 1px;
-    margin: 2px;
+
+.tag {
+  width: fit-content;
+  color: white;
+  background-color: rgb(12, 168, 168);
+  border-radius: 5px;
+  padding: 1px;
+  margin: 2px;
 }
