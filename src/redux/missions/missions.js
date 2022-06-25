@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const GET_MISSIONS = 'spacex-project/missions/GET_MISSIONS';
-const CHANGE_MISSION_STATUS = 'spacex-project/missions/CHANGE_MISSION_STATUS';
+const GET_MISSIONS = 'GET_MISSIONS';
+const CHANGE_MISSION_STATUS = 'CHANGE_MISSION_STATUS';
 const MISSION_URL = 'https://api.spacexdata.com/v3/missions';
 
 const initialState = [];
